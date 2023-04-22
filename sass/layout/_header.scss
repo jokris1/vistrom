@@ -1,27 +1,18 @@
 .header-top {
-    padding: 0.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
     background-color: black;
 
     .info-top {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
 
         .info-top-frakt {
-            margin: 0 1rem 0 4rem; // t-r-b-l
-        }
-    }
-
-    .nav-top {
-        margin-right: 6rem;
-
-        a {
-            margin: 0 0.5rem;
-            text-decoration: none;
-            color: $grey;
+            padding: 0 1rem; // tb-lr / t-r-b-l
         }
     }
 }

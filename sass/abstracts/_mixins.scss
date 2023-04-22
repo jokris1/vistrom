@@ -1,30 +1,31 @@
 // https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
 
-  $breakpoints: ( // min-widths
-  phone-only : 480px,
-  tablet-portrait: 600px,
-  tablet-landscape : 900px,
-  desktop : 1200px,
-  big-desktop : 1800px
+$breakpoints: (
+    // min-widths
+    phone-only: 320px,
+    tablet-portrait: 600px,
+    tablet-landscape: 900px,
+    desktop: 1200px,
+    big-desktop: 1800px
 );
 
 @mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
     // If $mq-breakpoint is a key that exists in
     // $mq-breakpoints, get and use the value
     @if map-has-key($mq-breakpoints, $mq-breakpoint) {
-      $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+        $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
     }
-    
+
     @media screen and (min-width: #{$mq-breakpoint}) {
-      @content;
+        @content;
     }
-  }
+}
 
 // example usage
 // .main    { width: 100%; }
 // .sidebar { width: 100%; }
 
-// @include mq(medium) {
+// @include mq(phone-only) {
 //   .main    { width: 60%; }
 //   .sidebar { width: 40%; }
 // }

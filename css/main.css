@@ -310,72 +310,256 @@ template {
 .header-top {
   font-family: Verdana, Helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   color: #ccc;
+}
+
+.product-display .container-images-dots {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.product-display .container-images-dots .product.img {
+  margin: 0;
+  padding: 0;
+}
+.product-display .container-images-dots .product1-img {
+  display: none;
+  font-size: 0px;
+}
+.product-display .container-images-dots .product2-img {
+  display: none;
+  font-size: 0px;
+}
+.product-display .container-images-dots .product3-img {
+  display: none;
+  font-size: 0px;
+}
+.product-display .container-images-dots .showProduct {
+  display: block;
+}
+.product-display .container-images-dots .product-current {
+  margin: 0 auto;
+  bottom: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-display .container-images-dots .dot-container {
+  padding: 0.5rem;
+  display: inline-block;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.product-display .container-images-dots .dot-container .dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  font-size: 0.5rem;
+  border-radius: 50%;
+  background-color: #ccc;
+  opacity: 75%;
+  border-radius: 50%;
+  outline: 1px solid #ccc;
+}
+.product-display .container-images-dots .dot-container .current-dot {
+  background-color: white;
+  opacity: 100%;
+}
+.product-display .container-product-info {
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+.product-display .container-product-info .display-news {
+  position: absolute;
+  display: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 0.2rem 0.6rem;
+}
+.product-display .container-product-info .showProduct {
+  display: block;
+}
+.product-display .container-product-info .product1-info {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+}
+.product-display .container-product-info .product2-info {
+  display: none;
+}
+.product-display .container-product-info .product3-info {
+  display: none;
+}
+.product-display .container-product-info .showProduct {
+  display: block;
 }
 
 .navbar {
   display: flex;
 }
 
+@media screen and (min-width: 320px) {
+  .hamburger {
+    position: right;
+    z-index: 100;
+    top: 1rem;
+    padding: 0px;
+    border: none;
+    background: black;
+    cursor: pointer;
+  }
+  .hamburger i {
+    font-size: 1rem;
+    margin: 0.5rem;
+    color: #ccc;
+    font-weight: bold;
+  }
+  .hamburger-active {
+    background-color: white;
+    color: black;
+  }
+  .nav-top {
+    position: fixed;
+    transform: translateY(-110%);
+    transition: transform 0.25s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    color: white;
+    list-style: none;
+    padding-top: 4rem;
+  }
+  .nav-top ul {
+    padding: 1rem;
+    background-color: white;
+  }
+  .nav-top ul li {
+    display: block;
+    font-size: 2rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #ccc;
+  }
+  .nav-top ul li a {
+    text-decoration: none;
+  }
+  .showMenu {
+    transform: translateY(0%);
+    position: fixed;
+    background-color: white;
+  }
+}
 .header-top {
   grid-area: header-top;
 }
 
-.nav-top {
-  grid-area: nav-top;
-}
-
-.header-main {
-  grid-area: header-main;
+.logo {
+  grid-area: logo;
 }
 
 .content-main {
   grid-area: content-main;
 }
 
-.footer {
-  grid-area: footer;
+.footer-adress {
+  grid-area: footer-adress;
 }
 
 .footer-bottom {
   grid-area: footer-bottom;
 }
 
-.main-container {
-  display: grid;
-  grid-template-areas: "header-top header-top header-top header-top header-top header-top" "nav-top nav-top nav-top nav-top nav-top nav-top" "header-main header-main header-main header-main header-main header-main" "content-main content-main content-main content-main content-main content-main" "footer footer footer footer footer footer" ". social social social social ." ". bottom-nav bottom-nav bottom-nav bottom-nav ." ". footer-bottom footer-bottom footer-bottom footer-bottom .";
+.mobile-search {
+  grid-area: mobile-search;
 }
 
+.hamburger {
+  grid-area: hamburger;
+}
+
+@media screen and (min-width: 320px) {
+  body {
+    display: block;
+    overflow-y: hidden;
+  }
+  .main-container {
+    display: grid;
+    grid-template-areas: "header-top header-top hamburger" "logo mobile-search mobile-search" "content-main content-main content-main" "footer-adress footer-adress footer-adress" "footer-bottom footer-bottom footer-bottom";
+  }
+}
 .header-top {
-  padding: 0.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   background-color: black;
 }
 .header-top .info-top {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .header-top .info-top .info-top-frakt {
-  margin: 0 1rem 0 4rem;
+  padding: 0 1rem;
 }
-.header-top .nav-top {
-  margin-right: 6rem;
+
+img {
+  max-width: 100%;
 }
-.header-top .nav-top a {
-  margin: 0 0.5rem;
-  text-decoration: none;
-  color: #ccc;
+
+.logo {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
 }
 
 .footer {
   background-color: lightyellow;
 }
+.footer .nav-shop {
+  display: none;
+}
+.footer .footer-kundservice {
+  display: none;
+}
+.footer h2 {
+  display: none;
+}
 
-@media screen and (min-width: 480px) {
+.mobile-search {
+  display: flex;
+  width: 100%;
+  background-color: #eee;
+  border: none;
+  align-items: center;
+}
+.mobile-search .mobile-input {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  border: 0;
+  background-color: #eee;
+  padding: 0.2rem;
+}
+.mobile-search .mobile-input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 320px) {
   .main {
     width: 60%;
   }
@@ -384,6 +568,18 @@ template {
   .main {
     width: 70%;
   }
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.content-main {
+  display: flex;
 }
 
 /*# sourceMappingURL=main.css.map */

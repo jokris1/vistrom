@@ -8,6 +8,7 @@
     <meta content='HTML5 Template Design' name='description' />
     <meta content='width=device-width, initial-scale=1' name='viewport' />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="root">
@@ -18,23 +19,57 @@
                 <article class="info-top-frakt">FRI FRAKT & FRIA RETURER</article>
                 <article class="info-top-delivery">1-3 DAGARS LEVERANS</article>
             </section>
+        </header>
+
             
-            <nav class="nav-top">
-                <a href="/blogg">BLOGG</a>
-                <a href="/konto">MITT KONTO</a>
-                <a href="/kundtjanst">KUNDTJÄNST</a>
-            </nav>
+        <!-- MOBILE MENU -->
+        <nav class="nav-top mobile-menu">
+            <ul>
+                <li><a href="/herr">HERR</a></li>
+                <li><a href="/dam">DAM</a></li>
+                <li><a href="/marken">MÄRKEN</a></li>
+                <li><a href="/rea">REA</a></li>
+                <li><a href="/kundservice">Kundservice</a></li>
+                <li><a href="/sok">Sök</a></li>
+                <li><a href="/lista">Lista</a></li>
+                <li><a href="/kundkorg">Kundkorg</a></li>
+            </ul>
+        </nav>
+
+        <!-- LOGO-->
+        <picture class="logo">
+            <div>LOGO</div>
+            <!-- <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+            <source media="(min-width: 800px)" srcset="elva-800w.jpg" /> -->
+            <!-- <img src="images/.jpg" alt="Chris standing up holding his daughter Elva" /> -->
+        </picture>
+
+        <section class="search mobile-search">
+            <i class="searchIcon material-icons">search</i>
+            <input class="mobile-input">
+        </section>
+
+
+            <!-- <nav class="nav-top">
+                <a href="/herr">HERR</a>
+                <a href="/dam">DAM</a>
+                <a href="/marken">MÄRKEN</a>
+                <a href="/rea">REA</a>
+            </nav> -->
+
+            <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">menu</i>
+            </button>
         </header>
 
         <!-- MAIN HEADER -->
         <header class="header-main">
-            <nav class="nav-main">
+            <!-- <nav class="nav-main">
                 <a href="/">Home</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
-            </nav>
-
-            <picture class="logo"></picture>
+            </nav> -->
 
             <nav class="nav-basket">
                 <a href="/sok"></a>
@@ -94,11 +129,8 @@
     </main>
 
     <script src="/js/router.js"></script>
+    <script src="/js/index.js" type="module"></script>
 </body>
-
-<!-- <script src="main.js"></script>
-<script src="./pages/home.js"></script>
-<script src="./components/navMain.js"></script> -->
 </html>
 
 
@@ -113,88 +145,3 @@
 
 
 
-
-
-
-
-
-
-
-    <!-- Content
- 
-    <include src="components/footer.html"></include> -->
-   
-    <!-- <div id="main-container">
-        <header id="header">
-        </header>
-
-        <section> Skptricks </section>
-
-        <nav class="navbar">
-            <ul>
-                <li><a href="http://www.skptricks.com/p/php.html">PHP</a>
-                </li>
-                <li><a href="http://www.skptricks.com/search/label/java">JAVA</a>
-                </li>
-                <li><a href="http://www.skptricks.com/search/label/jquery">Jquery</a>
-                </li>
-                <li><a href="http://www.skptricks.com/search/label/AJAX">AJAX</a>
-                </li>
-                <li><a href="http://www.skptricks.com/search/label/android">Android</a>
-                </li>
-            </ul>
-        </nav>
-
-        <section id="display-ads">
-            <h1><center> Display Ads </center> </h1>
-        </section>
-
-        <section id="main-body-container">
-
-            <article id="main-article">
-                <h1> Article Box </h1>
-                <section> You can write or mention your article description here </section>
-            </article>
-
-            <aside id='sidebar'>
-                <h1> Slider Box </h1>
-                <section> You can write or mention your Slider description here </section>
-            </aside>
-
-        </section>
-
-        <footer id="footer">Copyright © <a shref="http://www.skptricks.com">www.skptricks.com </a>
-        </footer>
-    </div> -->
-
-
-<!-- 
-
-function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain attribute:*/
-      file = elmnt.getAttribute("w3-include-html");
-      if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("w3-include-html");
-            includeHTML();
-          }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        return;
-      }
-    }
-  }; -->
-  <!-- </script> -->

@@ -1,0 +1,114 @@
+.product-display {
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+
+    .container-images-dots {
+        position: relative;
+
+        width: 100%;
+        text-align: center;
+
+        .product.img {
+            margin: 0;
+            padding: 0;
+        }
+
+        .product1-img {
+            display: none;
+            font-size: 0px;
+        }
+
+        .product2-img {
+            display: none;
+            font-size: 0px;
+        }
+
+        .product3-img {
+            display: none;
+            font-size: 0px;
+        }
+
+        .showProduct {
+            display: block;
+        }
+
+        .product-current {
+            margin: 0 auto;
+            bottom: 10px;
+            position: absolute; // move freely inside parent
+            // position center
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dot-container {
+            padding: 0.5rem;
+            // text-align: center;
+            // left: 200px;
+            display: inline-block;
+            padding: 0 0.5rem;
+            cursor: pointer;
+
+            .dot {
+                display: inline-block;
+                height: 0.5rem;
+                width: 0.5rem;
+                font-size: 0.5rem;
+                border-radius: 50%;
+                background-color: $grey;
+                opacity: 75%;
+                border-radius: 50%;
+                outline: 1px solid $grey;
+            }
+
+            .current-dot {
+                background-color: white;
+                opacity: 100%;
+            }
+        }
+    }
+
+    .container-product-info {
+        position: relative;
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0 auto;
+
+        .display-news {
+            position: absolute;
+            display: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            color: white;
+            padding: 0.2rem 0.6rem;
+        }
+
+        .showProduct {
+            display: block;
+        }
+
+        .product1-info {
+            display: none;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .product2-info {
+            display: none;
+        }
+
+        .product3-info {
+            display: none;
+        }
+
+        // this has to be last, otherwise it will be overridden by none abive
+        .showProduct {
+            display: block;
+        }
+    }
+}

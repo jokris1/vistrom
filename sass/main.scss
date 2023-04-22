@@ -1,21 +1,47 @@
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 
-@import 'base/normalize';
-@import 'base/typography';
+@import "base/normalize";
+@import "base/typography";
 
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
+@import "layout/content-index";
+
+@import "layout/navigation";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/images";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/forms";
 
 // @import 'components/buttons';
 // @import 'components/carousel';
 // @import 'components/slider';
 
-@import 'pages/_home';
+@import "pages/_home";
 // @import 'pages/about';
 // @import 'pages/contact';
+
+// // avoid transition on load
+// .no-transition * {
+//     -webkit-transition: none !important;
+//     -moz-transition: none !important;
+//     -ms-transition: none !important;
+//     -o-transition: none !important;
+//     transition: none !important;
+// }
+
+// avoid horizontal scrolling
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.content-main {
+    display: flex;
+}

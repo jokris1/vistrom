@@ -1,3 +1,72 @@
 .navbar {
     display: flex;
-  }
+}
+
+@include mq(phone-only) {
+    // style button
+    .hamburger {
+        position: right;
+        z-index: 100;
+        top: 1rem;
+        padding: 0px;
+        border: none;
+        background: black;
+        cursor: pointer;
+
+        i {
+            font-size: 1rem;
+            margin: 0.5rem;
+            color: $grey;
+            font-weight: bold;
+        }
+    }
+
+    .hamburger-active {
+        background-color: white;
+        color: black;
+    }
+
+    .nav-top {
+        position: fixed; //
+        transform: translateY(-110%); // hide by default above screen
+        transition: transform 0.25s; // animation
+        // cover whole screen
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 99;
+        background: black;
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+
+        ul {
+            padding: 1rem;
+            background-color: white;
+
+            li {
+                display: block;
+                font-size: 2rem;
+                padding: 0.5rem;
+                text-decoration: none;
+                color: $grey;
+                // menu links
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    // will be added and removed from menu, to show it
+    .showMenu {
+        transform: translateY(0%);
+        position: fixed;
+        background-color: white;
+    }
+
+    // .main    { width: 60%; }
+    // .sidebar { width: 40%; }
+}
