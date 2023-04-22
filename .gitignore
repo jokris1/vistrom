@@ -1,0 +1,9 @@
+node_modules/
+__MACOSX/
+filer/
+
+*.txt
+*.pdf
+*.zip
+*.png
+*.md

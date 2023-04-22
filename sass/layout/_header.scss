@@ -1,0 +1,27 @@
+.header-top {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: black;
+
+    .info-top {
+        display: flex;
+        flex-direction: row;
+
+        .info-top-frakt {
+            margin: 0 1rem 0 4rem; // t-r-b-l
+        }
+    }
+
+    .nav-top {
+        margin-right: 6rem;
+
+        a {
+            margin: 0 0.5rem;
+            text-decoration: none;
+            color: $grey;
+        }
+    }
+}

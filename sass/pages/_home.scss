@@ -1,0 +1,8 @@
+@include mq(phone-only) {
+  .main    { width: 60%; }
+//   .sidebar { width: 40%; }
+}
+@include mq(tablet-portrait) {
+  .main    { width: 70%; }
+//   .sidebar { width: 30%; }
+}

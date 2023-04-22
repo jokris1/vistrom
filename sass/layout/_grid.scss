@@ -1,0 +1,20 @@
+.header-top { grid-area: header-top; }
+.nav-top { grid-area: nav-top; }
+.header-main { grid-area: header-main; }
+.content-main { grid-area: content-main; }
+.footer { grid-area: footer; }
+.footer-bottom { grid-area: footer-bottom; }
+
+.main-container {
+display: grid;
+  grid-template-areas:
+    'header-top header-top header-top header-top header-top header-top'
+    'nav-top nav-top nav-top nav-top nav-top nav-top'
+    'header-main header-main header-main header-main header-main header-main'
+    'content-main content-main content-main content-main content-main content-main'
+    'footer footer footer footer footer footer'
+    '. social social social social .'
+    '. bottom-nav bottom-nav bottom-nav bottom-nav .'
+    '. footer-bottom footer-bottom footer-bottom footer-bottom .'
+    ;
+}
