@@ -1,24 +1,3 @@
-// .header-top { grid-area: header-top; }
-// .nav-top { grid-area: nav-top; }
-// .header-main { grid-area: header-main; }
-// .content-main { grid-area: content-main; }
-// .footer { grid-area: footer; }
-// .footer-bottom { grid-area: footer-bottom; }
-
-// .main-container {
-// display: grid;
-//   grid-template-areas:
-//     'header-top header-top header-top header-top header-top header-top'
-//     'nav-top nav-top nav-top nav-top nav-top nav-top'
-//     'header-main header-main header-main header-main header-main header-main'
-//     'content-main content-main content-main content-main content-main content-main'
-//     'footer footer footer footer footer footer'
-//     '. social social social social .'
-//     '. bottom-nav bottom-nav bottom-nav bottom-nav .'
-//     '. footer-bottom footer-bottom footer-bottom footer-bottom .'
-//     ;
-// }
-
 .header-top {
     grid-area: header-top;
     // width: 100%;
@@ -34,14 +13,17 @@
 .footer-adress {
     grid-area: footer-adress;
 }
-.footer-bottom {
-    grid-area: footer-bottom;
+.footer {
+    grid-area: footer;
 }
 .mobile-search {
     grid-area: mobile-search;
 }
 .hamburger {
     grid-area: hamburger;
+}
+.social-media {
+    grid-area: social-media;
 }
 
 @include mq(phone-only) {
@@ -56,7 +38,8 @@
             "header-top header-top hamburger"
             "logo mobile-search mobile-search"
             "content-main content-main content-main"
-            "footer-adress footer-adress footer-adress"
+            "social-media social-media social-media"
+            "footer footer footer"
             "footer-bottom footer-bottom footer-bottom";
     }
 }

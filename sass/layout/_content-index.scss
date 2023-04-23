@@ -73,8 +73,7 @@
 
     .container-product-info {
         position: relative;
-        justify-content: center;
-        width: 100%;
+        width: 90%;
         padding: 0.5rem;
         margin: 0 auto;
 
@@ -110,5 +109,68 @@
         .showProduct {
             display: block;
         }
+
+        // inside container-product-info
+        .animatedDivs-container {
+            color: $grey;
+            .clickableDiv:last-child {
+                border-bottom: 1px solid $grey;
+            }
+
+            .clickableDiv {
+                padding: 0.4rem 0;
+                text-align: left;
+                border-top: 1px solid $grey;
+
+                .expand_moreIcon {
+                    color: $grey;
+                    float: right;
+                }
+
+                .animatedDiv {
+                    font-size: 0;
+                }
+            }
+        }
+    }
+}
+
+.showDropdown {
+    animation: showIt 0.5s forwards;
+}
+@keyframes showIt {
+    from {
+        display: none;
+        height: 0;
+        opacity: 0;
+        display: none;
+        font-size: 1rem;
+    }
+    to {
+        // display: block;
+        height: 200px;
+        opacity: 1;
+        display: block;
+        font-size: 1rem;
+    }
+}
+
+.hideDropdown {
+    animation: hideIt 0.5s forwards;
+}
+@keyframes hideIt {
+    from {
+        // display: none;
+        height: 200px;
+        opacity: 1;
+        display: block;
+        font-size: 1rem;
+    }
+    to {
+        // display: block;
+        height: 0;
+        opacity: 0;
+        display: none;
+        font-size: 1rem;
     }
 }

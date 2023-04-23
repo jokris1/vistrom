@@ -24,10 +24,12 @@ const products = {
                 description: "Detta är lite text som berättar om produkten",
                 sizeInfo: "Lite info om passform",
                 laundry: "Lite tvätt och skötselråd",
-                shippingReturns: "Lite info om leverans och retur"
+                shipping: "Lite info om leverans och retur"
             },
         ]
 
+
+        // POPULATE DATA
         if (products[i].new) {
             news.innerText = "NYHET";
         }
@@ -52,10 +54,28 @@ const products = {
         laundry.innerText = products[i].laundry;
         shipping.innerText = products[i].shipping;
 
+        // clicking on dropdown for products
+        const clickableDivs = document.querySelectorAll(".clickableDiv");
+        console.log(clickableDivs)
+        clickableDivs.forEach(clickedDiv => {
+            clickedDiv.addEventListener("click", function(e) {
+                // this should happen when clicking div
+                let animatedDiv = clickedDiv.children[1];
 
+                // children[1] is hidden animatedDiv
+                if (animatedDiv.classList.contains("showDropdown")) {
 
-    }
-
+                    // hide info
+                    animatedDiv.classList.remove("showDropdown")
+                    animatedDiv.classList.add("hideDropdown")
+                } else {
+                    // show info
+                    animatedDiv.classList.add("showDropdown");
+                    animatedDiv.classList.remove("hideDropdown")
+                }
+            })
+        });
+    },
 }
 
 export default products;
